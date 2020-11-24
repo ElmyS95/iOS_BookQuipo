@@ -152,7 +152,7 @@
             </objects>
             <point key="canvasLocation" x="1047.8260869565217" y="137.94642857142856"/>
         </scene>
-        <!--Bookquito-->
+        <!--Bookquipo-->
         <scene sceneID="UWC-2s-FPA">
             <objects>
                 <viewController id="SLg-Wu-pqL" sceneMemberID="viewController">
@@ -162,13 +162,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="GGm-ze-y0c"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bookquito" id="Pbp-bN-ilo"/>
+                    <navigationItem key="navigationItem" title="Bookquipo" id="Pbp-bN-ilo"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lf4-Mc-GJU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3602.898550724638" y="137.94642857142856"/>
         </scene>
-        <!--Bookquito-->
+        <!--Bookquipo-->
         <scene sceneID="URN-Ig-wUy">
             <objects>
                 <viewController id="R2n-P0-CsX" sceneMemberID="viewController">
@@ -178,13 +178,13 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="dkg-Lg-E4E"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bookquito" id="uJS-wM-G5y"/>
+                    <navigationItem key="navigationItem" title="Bookquipo" id="uJS-wM-G5y"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6cy-sb-TXn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3602.898550724638" y="876.5625"/>
         </scene>
-        <!--Bookquito-->
+        <!--Bookquipo-->
         <scene sceneID="OQj-Lo-6DN">
             <objects>
                 <viewController id="sls-gn-rc0" customClass="HomeViewController" customModule="Bookquipo" customModuleProvider="target" sceneMemberID="viewController">
@@ -281,7 +281,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GhP-oQ-jkV"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Bookquito" id="sNV-AE-yCB">
+                    <navigationItem key="navigationItem" title="Bookquipo" id="sNV-AE-yCB">
                         <barButtonItem key="backBarButtonItem" title=" " id="QIe-3r-Wue"/>
                     </navigationItem>
                     <connections>
