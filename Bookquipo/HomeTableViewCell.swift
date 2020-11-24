@@ -25,4 +25,9 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    func setBookCell(book:Books){
+        bookTitle.text = book.bookName
+        authorName.text = book.authorName
+        bookImage.image = UIImage(named: book.bookPic)
+    }
 }
