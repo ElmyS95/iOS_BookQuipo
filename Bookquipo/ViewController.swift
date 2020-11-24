@@ -18,6 +18,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.setUpInitialUI()
+    }
+    
+    func setUpInitialUI() {
         navigationController?.navigationBar.isHidden = true
         let myColor = UIColor.white
         emailView.layer.borderColor = myColor.cgColor

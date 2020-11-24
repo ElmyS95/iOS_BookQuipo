@@ -11,6 +11,11 @@ import UIKit
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var homeTableView: UITableView!
+    @IBOutlet weak var categoryPickerView: UIPickerView!
+    
+    var category = ["Thriller","Romance","Adventure","Fantasy"]
+    var selectedList = [Books]()
+    var bookList = [Books]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,18 +23,9 @@ class HomeViewController: UIViewController {
         // Do any additional setup after loading the view.
         homeTableView.delegate = self
         homeTableView.dataSource = self
+        categoryPickerView.delegate = self
+        categoryPickerView.dataSource = self
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -43,5 +39,29 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         return cell
     }
     
+}
+
+extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return category.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return category[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedList.removeAll()
+        for books in bookList {
+            if category[row] == books.category {
+                selectedList.append(books)
+            }
+        }
+        homeTableView.reloadData()
+    }
     
 }
