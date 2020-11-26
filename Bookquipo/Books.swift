@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Books {
+class Books : Codable {
     
     var category:String
     var bookName:String
