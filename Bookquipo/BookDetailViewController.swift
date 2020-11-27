@@ -39,14 +39,17 @@ class BookDetailViewController: UIViewController {
     
     @IBAction func BookmarkButtonAction(_ sender: UIButton) {
         if let books = UserDefaultManager.shared.bookmarkData {
-            for data in books {
-                if data.bookName == book?.bookName {
-                    showToast(message: "This book is already bookmarked.", font: .systemFont(ofSize: 12.0))
-                } else {
-                    UserDefaultManager.shared.bookmarkData?.append(book!)
-                }
+            let bookmarkContain = books.contains(where: { (data) -> Bool in
+                data.bookName == book?.bookName
+            })
+            if(bookmarkContain){
+                showToast(message: "This book is already bookmarked.", font: .systemFont(ofSize: 12.0))
+            } else {
+                showToast(message: "Bookmarked", font: .systemFont(ofSize: 12.0))
+                UserDefaultManager.shared.bookmarkData?.append(book!)
             }
         } else {
+            showToast(message: "Bookmarked", font: .systemFont(ofSize: 12.0))
             UserDefaultManager.shared.bookmarkData = [book!]
         }
     }

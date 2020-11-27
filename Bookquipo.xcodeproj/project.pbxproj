@@ -22,6 +22,9 @@
 		59AACDB5256D4FDC00892FD6 /* Books.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59AACDB4256D4FDC00892FD6 /* Books.swift */; };
 		59E78E1C256F9E1200AF336A /* UserDefaultManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E78E1B256F9E1200AF336A /* UserDefaultManager.swift */; };
 		59E78E1E256FA1CD00AF336A /* CommonFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E78E1D256FA1CD00AF336A /* CommonFunctions.swift */; };
+		C819B43C2570138F002526A9 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819B43B2570138F002526A9 /* BookmarkViewController.swift */; };
+		C819B441257013C8002526A9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819B440257013C8002526A9 /* ProfileViewController.swift */; };
+		C819B446257014BC002526A9 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819B445257014BC002526A9 /* BookmarkTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,9 @@
 		59AACDB4256D4FDC00892FD6 /* Books.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Books.swift; sourceTree = "<group>"; };
 		59E78E1B256F9E1200AF336A /* UserDefaultManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultManager.swift; sourceTree = "<group>"; };
 		59E78E1D256FA1CD00AF336A /* CommonFunctions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommonFunctions.swift; sourceTree = "<group>"; };
+		C819B43B2570138F002526A9 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
+		C819B440257013C8002526A9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		C819B445257014BC002526A9 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +133,9 @@
 				59AACDB4256D4FDC00892FD6 /* Books.swift */,
 				59E78E1B256F9E1200AF336A /* UserDefaultManager.swift */,
 				59E78E1D256FA1CD00AF336A /* CommonFunctions.swift */,
+				C819B43B2570138F002526A9 /* BookmarkViewController.swift */,
+				C819B440257013C8002526A9 /* ProfileViewController.swift */,
+				C819B445257014BC002526A9 /* BookmarkTableViewCell.swift */,
 			);
 			path = Bookquipo;
 			sourceTree = "<group>";
@@ -280,16 +289,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C819B43C2570138F002526A9 /* BookmarkViewController.swift in Sources */,
 				59AACDB5256D4FDC00892FD6 /* Books.swift in Sources */,
 				0DF8C76B256EB7BA00A1D925 /* BookMoreDetailViewController.swift in Sources */,
 				59E78E1E256FA1CD00AF336A /* CommonFunctions.swift in Sources */,
 				59AACD81256D0CFA00892FD6 /* LoginViewController.swift in Sources */,
 				59AACDAF256D1D2100892FD6 /* HomeTableViewCell.swift in Sources */,
+				C819B441257013C8002526A9 /* ProfileViewController.swift in Sources */,
 				59AACD7D256D0CFA00892FD6 /* AppDelegate.swift in Sources */,
 				0DF8C769256EADA500A1D925 /* BookDetailViewController.swift in Sources */,
 				59E78E1C256F9E1200AF336A /* UserDefaultManager.swift in Sources */,
 				59AACD7F256D0CFA00892FD6 /* SceneDelegate.swift in Sources */,
 				59AACDAD256D1CCC00892FD6 /* HomeViewController.swift in Sources */,
+				C819B446257014BC002526A9 /* BookmarkTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

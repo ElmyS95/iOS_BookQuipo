@@ -19,6 +19,16 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setUpInitialUI()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        _ = segue.destination as? HomeViewController
     }
     
     func setUpInitialUI() {
@@ -29,6 +39,31 @@ class LoginViewController: UIViewController {
 
         emailView.layer.borderWidth = 1.0
         passwordView.layer.borderWidth = 1.0
+        
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+    }
+    
+    @IBAction func loginButtonAction(_ sender: UIButton) {
+        if emailTextField.text == "" {
+            self.showToast(message: "Username is empty.", font: .systemFont(ofSize: 12.0))
+        } else if passwordTextField.text == "" {
+            self.showToast(message: "Password is empty", font: .systemFont(ofSize: 12.0))
+        } else {
+            if emailTextField.text == "User" && passwordTextField.text == "User@123" {
+                self.performSegue(withIdentifier: "login", sender: self)
+            } else {
+                self.showToast(message: "Invalid username and password", font: .systemFont(ofSize: 12.0))
+                self.emailTextField.text = ""
+                self.passwordTextField.text = ""
+            }
+        }
     }
 }
 
+extension LoginViewController : UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
+    }
+}
