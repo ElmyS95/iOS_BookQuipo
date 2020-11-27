@@ -491,17 +491,11 @@
                         <viewLayoutGuide key="safeArea" id="0RE-lp-sOr"/>
                     </view>
                     <navigationItem key="navigationItem" id="q3U-mo-1pI">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="V14-Lr-hhL">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pUn-qy-9P3">
-                                <rect key="frame" x="330" y="0.0" width="64" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="imageEdgeInsets" minX="5" minY="5" maxX="5" maxY="5"/>
-                                <state key="normal" image="bookmark"/>
-                                <connections>
-                                    <action selector="BookmarkButtonAction:" destination="Koz-gV-gx1" eventType="touchUpInside" id="WxG-CA-aLD"/>
-                                </connections>
-                            </button>
+                        <barButtonItem key="rightBarButtonItem" image="bookmark-small" id="5Qi-V3-Kvi">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="BookmarkButtonAction:" destination="Koz-gV-gx1" id="q7o-cv-ny9"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -671,10 +665,11 @@
     <resources>
         <image name="background" width="1350" height="2400"/>
         <image name="bookmark" width="32" height="32"/>
+        <image name="bookmark-small" width="24" height="24"/>
         <image name="open-book" width="32" height="32"/>
         <image name="user" width="32" height="32"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="ASe-VC-pfr"/>
+        <segue reference="C1e-JB-ZtD"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -37,7 +37,7 @@ class BookDetailViewController: UIViewController {
            }
        }
     
-    @IBAction func BookmarkButtonAction(_ sender: UIButton) {
+    @IBAction func BookmarkButtonAction(_ sender: UIBarButtonItem) {
         if let books = UserDefaultManager.shared.bookmarkData {
             let bookmarkContain = books.contains(where: { (data) -> Bool in
                 data.bookName == book?.bookName
