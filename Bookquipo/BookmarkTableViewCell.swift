@@ -13,21 +13,23 @@ class BookmarkTableViewCell: UITableViewCell {
     @IBOutlet weak var bookImage: UIImageView!
     @IBOutlet weak var bookTitle: UILabel!
     @IBOutlet weak var authorName: UILabel!
+
+    var removeBook: ((Books) -> Void)? = nil
+    var book: Books? = nil
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
-    func setBookCell(book:Books){
+    // set image and text of book in bookmark table cell
+    func setBookCell(book:Books, removeBook: @escaping (Books) -> Void ){
+        self.book = book
+        self.removeBook = removeBook
         bookTitle.text = book.bookName
         authorName.text = book.authorName
         bookImage.image = UIImage(named: book.bookPic)
+    }
+    
+    // invoke remove book method on click of remove button
+    @IBAction func removeClicked(_ sender: Any) {
+        if book != nil {
+            removeBook?(book!)
+        }
     }
 }

@@ -10,13 +10,16 @@ import UIKit
 
 class BookDetailViewController: UIViewController {
 
+    // Outlets
     @IBOutlet weak var imageViewBook: UIImageView!
     @IBOutlet weak var txtViewBook: UITextView!
 
+    // Variables
     var book: Books?
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // setting the selected data from home page to detail page
         if let book = book {
             self.setUpNavBar(book.bookName)
             imageViewBook.image = UIImage(named: book.bookPic)
@@ -24,6 +27,7 @@ class BookDetailViewController: UIViewController {
         }
     }
     
+    // Setting navigation and tab bar
     func setUpNavBar(_ title: String){
         self.navigationController?.view.backgroundColor = UIColor.white
         self.navigationController?.view.tintColor = UIColor.white
@@ -31,12 +35,15 @@ class BookDetailViewController: UIViewController {
         self.tabBarController?.tabBar.isHidden = true
     }
     
+    // segue function to move to show more page
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
            if let bookMoreDetailVC = segue.destination as? BookMoreDetailViewController, let book = book {
                bookMoreDetailVC.book = book
            }
        }
     
+    // Actions
+    // Bookmark button action
     @IBAction func BookmarkButtonAction(_ sender: UIBarButtonItem) {
         if let books = UserDefaultManager.shared.bookmarkData {
             let bookmarkContain = books.contains(where: { (data) -> Bool in

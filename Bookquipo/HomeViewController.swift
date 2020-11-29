@@ -10,23 +10,28 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // Outlets
     @IBOutlet weak var homeTableView: UITableView!
     @IBOutlet weak var categoryPickerView: UIPickerView!
     
+    // Variable declaration
     var category = ["Thriller","Romance","Adventure","Fantasy"]
     var selectedList = [Books]()
     var bookList = [Books]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // calling the initial function
         self.intialSetup()
     }
     
+    // making the hidden tabbar to visible while coming from detail page to home page
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.tabBarController?.tabBar.isHidden = false
     }
 
+    // segue function to move to book detail view controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let bookDetailVC = segue.destination as? BookDetailViewController, let book = sender as? Books {
             bookDetailVC.book = book
@@ -34,6 +39,7 @@ class HomeViewController: UIViewController {
     }
 }
 
+// Tableview delegate methods
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return selectedList.count
@@ -51,6 +57,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
+// Picker view delegate methods
 extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
@@ -78,6 +85,7 @@ extension HomeViewController: UIPickerViewDataSource, UIPickerViewDelegate {
 
 extension HomeViewController {
     
+    // Initail data setting up
     func intialSetup()  {
          homeTableView.delegate = self
          homeTableView.dataSource = self
@@ -92,6 +100,7 @@ extension HomeViewController {
          }
     }
     
+    // Function to add data to books class.
     func fillData() {
         bookList.append(Books(category: "Thriller", name: "Silent Patient", author: "Alex Michaelides", summary: "The Silent Patient is a 2019 psychological thriller novel written by British-Cypriot author Alex Michaelides. The debut novel was published by Celadon Books, a division of Macmillan Publishers, on 5th February 2019. The audiobook version, released on the same date, is read by Louise Brealey and Jack Hawkins.", details: "A gruesome murder, a woman held captive in her own mind, and a therapist determined to unlock her secrets - what’s not to love about Alex Michaelides’ THE SILENT PATIENT? This sophisticated debut suspense novel is every bit deserving of the effusive early praise it’s already receiving. Reading more like a character study than a psychological thriller, THE SILENT PATIENT is a maze-like exploration of the psyches of both a woman convicted of murdering her husband and the therapist determined to treat her. The impactfulness of Michaelides’ exceptional first novel lies not in mile-a-minute pacing or whiplash-inducing twists, but in the author’s masterful, methodical building - and breaking down - of his characters. Just as his protagonist explores and unveils the mental state of his subject, so, too, does Michaelides methodically reveal to his readers the psychology of the characters upon which THE SILENT PATIENT is built. Rather than investigating a crime, THE SILENT PATIENT investigates the mind of a criminal - and what a gripping investigation it is. THE SILENT PATIENT is immersive and hypnotic—the kind of confidently drawn suspense story that doesn’t need big, flashy twists to keep you hooked… but that delivers an exceptional twist or two anyway. Believe the hype: THE SILENT PATIENT may well be the debut crime novel of the season.", price: 10.40, pic: "silent"))
         bookList.append(Books(category: "Thriller", name: "Gone Girl", author: "Gillian Flynn", summary: "Gone Girl is a thriller novel in the mystery and crime genres, by the American writer Gillian Flynn. It was published by Crown Publishing Group in June 2012. The novel became quite popular and soon made the New York Times Best Seller list.", details: "Gone Girl is a thriller novel in the mystery and crime genres, by the American writer Gillian Flynn. It was published by Crown Publishing Group in June 2012. The novel became quite popular and soon made the New York Times Best Seller list. The sense of suspense in the novel comes from whether or not Nick Dunne is involved in the disappearance of his wife Amy. In several interviews, Flynn has said that she was inspired to write the novel by the disappearance of Californian Laci Peterson in late 2002.[1] Portraying her principal characters as out-of-work writers, she made use of her own experience being laid off from her job as a writer for Entertainment Weekly. Critics in the United States positively received and reviewed the novel. Reviewers praised the novel's use of unreliable narration, plot twists, and suspense. A film adaptation was released on October 3, 2014, directed by David Fincher, and written by Flynn herself, with Ben Affleck and Rosamund Pike starring in lead roles. The film was met with both commercial success and widespread critical acclaim.", price: 4.30, pic: "gonegirl"))

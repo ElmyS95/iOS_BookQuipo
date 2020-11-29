@@ -25,6 +25,7 @@
 		C819B43C2570138F002526A9 /* BookmarkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819B43B2570138F002526A9 /* BookmarkViewController.swift */; };
 		C819B441257013C8002526A9 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819B440257013C8002526A9 /* ProfileViewController.swift */; };
 		C819B446257014BC002526A9 /* BookmarkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C819B445257014BC002526A9 /* BookmarkTableViewCell.swift */; };
+		C8C63DE725711D0500376DBD /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8C63DE625711D0400376DBD /* UserProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		C819B43B2570138F002526A9 /* BookmarkViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkViewController.swift; sourceTree = "<group>"; };
 		C819B440257013C8002526A9 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C819B445257014BC002526A9 /* BookmarkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkTableViewCell.swift; sourceTree = "<group>"; };
+		C8C63DE625711D0400376DBD /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 				C819B43B2570138F002526A9 /* BookmarkViewController.swift */,
 				C819B440257013C8002526A9 /* ProfileViewController.swift */,
 				C819B445257014BC002526A9 /* BookmarkTableViewCell.swift */,
+				C8C63DE625711D0400376DBD /* UserProfile.swift */,
 			);
 			path = Bookquipo;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 			files = (
 				C819B43C2570138F002526A9 /* BookmarkViewController.swift in Sources */,
 				59AACDB5256D4FDC00892FD6 /* Books.swift in Sources */,
+				C8C63DE725711D0500376DBD /* UserProfile.swift in Sources */,
 				0DF8C76B256EB7BA00A1D925 /* BookMoreDetailViewController.swift in Sources */,
 				59E78E1E256FA1CD00AF336A /* CommonFunctions.swift in Sources */,
 				59AACD81256D0CFA00892FD6 /* LoginViewController.swift in Sources */,

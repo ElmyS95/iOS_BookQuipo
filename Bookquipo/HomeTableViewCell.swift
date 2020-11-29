@@ -25,6 +25,7 @@ class HomeTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    // Function to set data to book cells.
     func setBookCell(book:Books){
         bookTitle.text = book.bookName
         authorName.text = book.authorName

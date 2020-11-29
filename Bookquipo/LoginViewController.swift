@@ -10,6 +10,7 @@ import UIKit
 
 class LoginViewController: UIViewController {
 
+    //Outlets
     @IBOutlet weak var passwordView: UIView!
     @IBOutlet weak var emailView: UIView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -19,10 +20,12 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         self.setUpInitialUI()
+        // hides keyboard on background click
         let tap = UITapGestureRecognizer(target: self, action: #selector(LoginViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
     }
     
+    // function to hide the keyboard
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
@@ -31,6 +34,7 @@ class LoginViewController: UIViewController {
         _ = segue.destination as? HomeViewController
     }
     
+    // Initial UI setting up function
     func setUpInitialUI() {
         navigationController?.navigationBar.isHidden = true
         let myColor = UIColor.white
@@ -44,6 +48,8 @@ class LoginViewController: UIViewController {
         passwordTextField.delegate = self
     }
     
+    // Action
+    // Login button action
     @IBAction func loginButtonAction(_ sender: UIButton) {
         if emailTextField.text == "" {
             self.showToast(message: "Please enter the username.", font: .systemFont(ofSize: 12.0))
@@ -61,7 +67,10 @@ class LoginViewController: UIViewController {
     }
 }
 
+// Textfield delegate methods
 extension LoginViewController : UITextFieldDelegate {
+    
+    // Hides keyboard while pressing return button in keyboard
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false
