@@ -196,7 +196,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dDW-At-5Id">
-                                                    <rect key="frame" x="120" y="62" width="274" height="30"/>
+                                                    <rect key="frame" x="120" y="62" width="74" height="30"/>
                                                     <state key="normal" title="Remove">
                                                         <color key="titleColor" systemColor="systemPinkColor" red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -210,7 +210,7 @@
                                                 <constraint firstItem="1ep-cB-esR" firstAttribute="leading" secondItem="LZv-AL-Lq7" secondAttribute="leading" constant="20" id="4Ll-QI-dRA"/>
                                                 <constraint firstItem="dDW-At-5Id" firstAttribute="top" secondItem="HQl-BF-2sy" secondAttribute="bottom" id="4em-mh-P0I"/>
                                                 <constraint firstItem="dDW-At-5Id" firstAttribute="leading" secondItem="HQl-BF-2sy" secondAttribute="leading" id="4oh-IO-LQB"/>
-                                                <constraint firstItem="dDW-At-5Id" firstAttribute="trailing" secondItem="HQl-BF-2sy" secondAttribute="trailing" id="5Vc-hx-AoF"/>
+                                                <constraint firstItem="dDW-At-5Id" firstAttribute="trailing" secondItem="HQl-BF-2sy" secondAttribute="trailing" constant="-200" id="5Vc-hx-AoF"/>
                                                 <constraint firstAttribute="bottom" secondItem="1ep-cB-esR" secondAttribute="bottom" constant="20" id="7mK-JC-GPT"/>
                                                 <constraint firstItem="6Kj-hz-NYy" firstAttribute="top" secondItem="1ep-cB-esR" secondAttribute="top" constant="-5" id="Gf8-NH-dbM"/>
                                                 <constraint firstItem="HQl-BF-2sy" firstAttribute="top" secondItem="6Kj-hz-NYy" secondAttribute="bottom" constant="5" id="Gg1-cu-Esg"/>
